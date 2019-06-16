@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="transcripts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="transcript" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="institution" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="printingDate" minOccurs="1" maxOccurs="1" type="xs:date"/>
+              <xs:element name="studentName" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="studentId" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="studentAddress" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="term" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="programName" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="studentStatus" maxOccurs="1">
+                      <xs:simpleType >
+                        <xs:restriction base="xs:NMTOKENS">
+                          <xs:enumeration value="In Good Standing"/>
+                          <xs:enumeration value="Conditional Continuation"/>
+                          <xs:enumeration value="Academic Probation"/>
+                          <xs:enumeration value="Required to Re-Apply"/>
+                          <xs:enumeration value="Recommended for Graduation"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="termGpa" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="0"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="termCredits" minOccurs="1" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="0"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="course" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="courseName" minOccurs="1" maxOccurs="1"/>
+                          <xs:element name="courseCredits" minOccurs="1" maxOccurs="1">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:integer">
+                                <xs:minInclusive value="0"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="studentGrade" minOccurs="1" maxOccurs="1">
+                            <xs:simpleType >
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="A+"/>
+                                <xs:enumeration value="A"/>
+                                <xs:enumeration value="B+"/>
+                                <xs:enumeration value="B"/>
+                                <xs:enumeration value="C+="/>
+                                <xs:enumeration value="C"/>
+                                <xs:enumeration value="D+"/>
+                                <xs:enumeration value="D"/>
+                                <xs:enumeration value="F"/>
+                                <xs:enumeration value="P"/>
+                                <xs:enumeration value="I"/>
+                                <xs:enumeration value="N"/>
+                                <xs:enumeration value="W"/>
+                                <xs:enumeration value="X"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="gradePoint" minOccurs="1" maxOccurs="1">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:decimal">
+                                <xs:pattern value="[0-4]+(\.[0-5]+)" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                        <xs:attribute name="code">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:pattern value="([A-Z]|[a-z]|[0-9]|-)+" />
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="title" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

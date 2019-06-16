@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDE3B252-9EAC-4CA0-9CB9-66BBA3FA29F6}"
+	ProjectSection(SolutionItems) = preProject
+		XMLSchema1.xsd = XMLSchema1.xsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7EA5844-E947-4304-A878-5AD08A1D5E4D}
+	EndGlobalSection
+EndGlobal

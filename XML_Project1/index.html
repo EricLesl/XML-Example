@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse:collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+<script>
+	var xmlDoc;
+
+  var counter = 0;
+
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      printTables(this);
+    }
+  };
+  xmlhttp.open("GET", "transcripts.xml", true);
+  xmlhttp.send();
+}
+
+function printTables(xml) {
+
+
+	var xmlDoc = xml.responseXML;
+	document.getElementById('transcriptTitle').innerHTML = xmlDoc.getElementsByTagName('transcript')[0].getAttribute('title');
+    document.getElementById('collegeName').innerHTML = xmlDoc.getElementsByTagName('institution')[0].childNodes[0].nodeValue;
+    document.getElementById('studentName').innerHTML = xmlDoc.getElementsByTagName('studentName')[0].childNodes[0].nodeValue;
+    document.getElementById('studentAddress').innerHTML = xmlDoc.getElementsByTagName('studentAddress')[0].childNodes[0].nodeValue;
+    document.getElementById('datePrinted').innerHTML = xmlDoc.getElementsByTagName('printingDate')[0].childNodes[0].nodeValue;
+    document.getElementById('studentNumber').innerHTML = xmlDoc.getElementsByTagName('studentId')[0].childNodes[0].nodeValue;
+
+
+    for(i = 0; i < 2; i++){
+
+      document.getElementById("first").innerHTML += "<th>" + "Term: <br>" + (xmlDoc.getElementsByTagName('term')[i].getAttribute('id')) + "<tr>" + "Standing: <br>" + xmlDoc.getElementsByTagName('studentStatus')[i].childNodes[0].nodeValue +"<br>" + "<tr>" + "Program: <br>" + xmlDoc.getElementsByTagName('programName')[i].childNodes[0].nodeValue;
+
+        
+        counter++;
+  
+
+        if(counter == 1){
+          for(j = 0; j < 4; j++){
+          document.getElementById("first").innerHTML += "<td>" + "Course: <br>" + (xmlDoc.getElementsByTagName('course')[j].getAttribute('code')) +
+          "<br><br>" + "Course Name: <br>" + (xmlDoc.getElementsByTagName('courseName')[j].childNodes[0].nodeValue) +
+          "<br><br>" + "Grade: <br>" + xmlDoc.getElementsByTagName('studentGrade')[j].childNodes[0].nodeValue +
+          "<br><br>" + "Credits: <br>" + xmlDoc.getElementsByTagName('courseCredits')[j].childNodes[0].nodeValue +
+          "<br><br>" + "Grade Points: <br>" + xmlDoc.getElementsByTagName('gradePoint')[j].childNodes[0].nodeValue + "<br /> <br />"
+          }
+        }else if(counter == 2){
+
+          for(k = 4; k < 8; k++){
+          document.getElementById("first").innerHTML += "<td>" + "Course: <br>" + (xmlDoc.getElementsByTagName('course')[k].getAttribute('code')) +
+          "<br><br>" + "Course Name: <br>" + (xmlDoc.getElementsByTagName('courseName')[k].childNodes[0].nodeValue) +
+          "<br><br>" + "Grade: <br>" + xmlDoc.getElementsByTagName('studentGrade')[k].childNodes[0].nodeValue +
+          "<br><br>" + "Credits: <br>" + xmlDoc.getElementsByTagName('courseCredits')[k].childNodes[0].nodeValue +
+          "<br><br>" + "Grade Points: <br>" + xmlDoc.getElementsByTagName('gradePoint')[k].childNodes[0].nodeValue + "<br /> <br />"
+          }
+
+          
+
+
+
+    }else{
+      for(n = 8; j < n; j++){
+          document.getElementById("first").innerHTML += "<td>" + "Course: <br>" + (xmlDoc.getElementsByTagName('course')[n].getAttribute('code')) +
+          "<br><br>" + "Course Name: <br>" + (xmlDoc.getElementsByTagName('courseName')[n].childNodes[0].nodeValue) +
+          "<br><br>" + "Grade: <br>" + xmlDoc.getElementsByTagName('studentGrade')[n].childNodes[0].nodeValue +
+          "<br><br>" + "Credits: <br>" + xmlDoc.getElementsByTagName('courseCredits')[n].childNodes[0].nodeValue +
+          "<br><br>" + "Grade Points: <br>" + xmlDoc.getElementsByTagName('gradePoint')[n].childNodes[0].nodeValue + "<br /> <br />"
+          }
+
+    }
+
+    
+        }
+    
+
+}
+</script>
+</head>
+<body onload="loadXMLDoc()">
+<h1 id="transcriptTitle"></h1>
+<h3 id="collegeName"></h3>
+<p id="studentName"/>
+<p id="studentAddress"/>
+<p id="datePrinted"/>
+<p id="studentNumber"/>
+<p></p>
+<table style="width:100%" id="first">
+</table>
+<h3 id="standing"></h3>
+
+</body>
+</html>

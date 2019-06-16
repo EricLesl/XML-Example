@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<transcripts xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:noNamespaceSchemaLocation="transcripts.xsd">
+  <!-- FIRST TRANSCRIPT -->
+  <transcript title="Transcript">
+    <institution>
+      Fanshawe College
+    </institution>
+    <printingDate>
+      2003-12-22
+    </printingDate>
+    <studentName>
+      Eric Leslie
+    </studentName>
+    <studentId>
+      63739
+    </studentId>
+    <studentAddress>
+      116 Jardine
+    </studentAddress>
+    <!-- first term -->
+    <term id="Fall_2018">
+
+      <programName>
+        Internet Applications and Web Development
+      </programName>
+      <studentStatus>
+        In Good Standing
+      </studentStatus>
+      <termGpa>
+        2
+      </termGpa>
+      <termCredits>
+        20
+      </termCredits>
+      <!-- course one -->
+      <course code="INF0-2938">
+        <courseName>
+          Strategies for Success
+        </courseName>
+        <courseCredits>
+          5
+        </courseCredits>
+        <studentGrade>A+</studentGrade>
+        <gradePoint>
+          4.2
+        </gradePoint>
+      </course>
+      <!-- course two -->
+      <course code="INF0-2253">
+        <courseName>
+          Databases
+        </courseName>
+        <courseCredits>
+          4
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.6
+        </gradePoint>
+      </course>
+      <!-- course three -->
+      <course code="INF0-2938">
+        <courseName>
+          Web Design
+        </courseName>
+        <courseCredits>
+          6
+        </courseCredits>
+        <studentGrade>B</studentGrade>
+        <gradePoint>
+          3.4
+        </gradePoint>
+      </course>
+      <!-- course four -->
+      <course code="INF0-5948">
+        <courseName>
+          OOP
+        </courseName>
+        <courseCredits>
+          6
+        </courseCredits>
+        <studentGrade>C</studentGrade>
+        <gradePoint>
+          2.9
+        </gradePoint>
+      </course>
+    </term>
+    
+    <!-- second term -->
+
+    <term id="Winter_2018">
+
+      <programName>
+        Internet Applications and Web Development
+      </programName>
+      <studentStatus>
+        Recommended for Graduation
+      </studentStatus>
+      <termGpa>
+        3
+      </termGpa>
+      <termCredits>
+        20
+      </termCredits>
+      <!-- course one -->
+      <course code="INF0-2938">
+        <courseName>
+          Race and Inequality
+        </courseName>
+        <courseCredits>
+          6
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.8
+        </gradePoint>
+      </course>
+      <!-- course two -->
+      <course code="INF0-4739">
+        <courseName>
+          ASP
+        </courseName>
+        <courseCredits>
+          3
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.8
+        </gradePoint>
+      </course>
+      <!-- course three -->
+      <course code="INF0-6488">
+        <courseName>
+          Business 
+        </courseName>
+        <courseCredits>
+          3
+        </courseCredits>
+        <studentGrade>C</studentGrade>
+        <gradePoint>
+          2.0
+        </gradePoint>
+      </course>
+      <!-- course four -->
+      <course code="INF0-3838">
+        <courseName>
+          Wprkplace Behaviours
+        </courseName>
+        <courseCredits>
+          5
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.8
+        </gradePoint>
+      </course>
+    </term>
+    
+  </transcript>
+
+  <!-- __________________________ SECOND TRANSCRIPT ____________________________ -->
+
+  <transcript title="Transcript">
+    <institution>
+      Fanshawe College
+    </institution>
+    <printingDate>
+      2018-12-22
+    </printingDate>
+    <studentName>
+      Jack Doe
+    </studentName>
+    <studentId>
+      47349
+    </studentId>
+    <studentAddress>
+      282 Kilwent
+    </studentAddress>
+    <!-- first term -->
+    <term id="FallTerm_18">
+
+      <programName>
+        Internet Applications and Web Development
+      </programName>
+      <studentStatus>
+        In Good Standing
+      </studentStatus>
+      <termGpa>
+        2
+      </termGpa>
+      <termCredits>
+        20
+      </termCredits>
+      <!-- course one -->
+      <course code="INF0-3238">
+        <courseName>
+          Management
+        </courseName>
+        <courseCredits>
+          5
+        </courseCredits>
+        <studentGrade>A+</studentGrade>
+        <gradePoint>
+          4.2
+        </gradePoint>
+      </course>
+      <!-- course two -->
+      <course code="INF0-2373">
+        <courseName>
+          Graphics
+        </courseName>
+        <courseCredits>
+          4
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.6
+        </gradePoint>
+      </course>
+      <!-- course three -->
+      <course code="INF0-3938">
+        <courseName>
+          LAMP
+        </courseName>
+        <courseCredits>
+          6
+        </courseCredits>
+        <studentGrade>B</studentGrade>
+        <gradePoint>
+          3.4
+        </gradePoint>
+      </course>
+      <!-- course four -->
+      <course code="INF0-5948">
+        <courseName>
+          OOP
+        </courseName>
+        <courseCredits>
+          6
+        </courseCredits>
+        <studentGrade>C</studentGrade>
+        <gradePoint>
+          2.9
+        </gradePoint>
+      </course>
+    </term>
+
+    <!-- second term -->
+
+    <term id="WinterTerm_18">
+
+      <programName>
+        Internet Applications and Web Development
+      </programName>
+      <studentStatus>
+        Recommended for Graduation
+      </studentStatus>
+      <termGpa>
+        3
+      </termGpa>
+      <termCredits>
+        20
+      </termCredits>
+      <!-- course one -->
+      <course code="INF0-2938">
+        <courseName>
+          Race and Inequality
+        </courseName>
+        <courseCredits>
+          6
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.8
+        </gradePoint>
+      </course>
+      <!-- course two -->
+      <course code="INF0-4739">
+        <courseName>
+          ASP
+        </courseName>
+        <courseCredits>
+          3
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.8
+        </gradePoint>
+      </course>
+      <!-- course three -->
+      <course code="INF0-6488">
+        <courseName>
+          Business
+        </courseName>
+        <courseCredits>
+          3
+        </courseCredits>
+        <studentGrade>C</studentGrade>
+        <gradePoint>
+          2.0
+        </gradePoint>
+      </course>
+      <!-- course four -->
+      <course code="INF0-3838">
+        <courseName>
+          Wprkplace Behaviours
+        </courseName>
+        <courseCredits>
+          5
+        </courseCredits>
+        <studentGrade>B+</studentGrade>
+        <gradePoint>
+          3.8
+        </gradePoint>
+      </course>
+    </term>
+
+  </transcript>
+
+</transcripts>
